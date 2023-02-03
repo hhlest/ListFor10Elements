@@ -24,9 +24,12 @@ public class MyList<T> {
         for (int i = 0; i < 10; i++) {
             myList.add(i, e);
         }
+//        myList.remove(0);
+//        myList.remove(0);
+//        myList.remove(myList.size()-1);
 
         List<T> result = new ArrayList<>();
-        for (int i = 2; i < 9; i++) {
+        for (int i = 2; i < myList.size()-1; i++) {
             result.add(myList.get(i));
         }
         myList = result;
