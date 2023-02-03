@@ -2,9 +2,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MyList<T> {
-    private List<T> myList = new ArrayList<>();
+    private List<T> myList;
 
     public MyList() {
+        myList = new ArrayList<>();
     }
 
     public MyList(List<T> myList) {
@@ -19,18 +20,17 @@ public class MyList<T> {
         this.myList = myList;
     }
 
-    public void addTenElements(T e) {
+    public void manageList(T e) {
         for (int i = 0; i < 10; i++) {
             myList.add(i, e);
         }
-    }
 
-    public void removeTwoFirstAndOneLast () {
         List<T> result = new ArrayList<>();
-        for (int i = 2; i < myList.size()-1; i++) {
+        for (int i = 2; i < 9; i++) {
             result.add(myList.get(i));
         }
         myList = result;
+        System.out.println(myList);
     }
 
     @Override
