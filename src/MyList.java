@@ -11,6 +11,14 @@ public class MyList<T> {
         this.myList = myList;
     }
 
+    public List<T> getMyList() {
+        return myList;
+    }
+
+    public void setMyList(List<T> myList) {
+        this.myList = myList;
+    }
+
     public void addTenElements(T e) {
         for (int i = 0; i < 10; i++) {
             myList.add(i, e);
@@ -23,14 +31,6 @@ public class MyList<T> {
             result.add(myList.get(i));
         }
         myList = result;
-    }
-
-    public List<T> getMyList() {
-        return myList;
-    }
-
-    public void setMyList(List<T> myList) {
-        this.myList = myList;
     }
 
     @Override
